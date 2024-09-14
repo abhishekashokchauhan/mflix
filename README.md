@@ -12,6 +12,7 @@
 - http://localhost:8080/comments?title=It
 - http://localhost:8080/movies?page=1&size=1
 - http://localhost:8080/movies?page=1&size=1&sortBy=year
+- curl --location 'http://localhost:8080/comments?title=Inception' --header 'Content-Type: application/json' --data '{"text": "Abhishek is trying and learnign new things"}'
 
 # Pending items
 - Explore mongoTempalte for Aggregations.
