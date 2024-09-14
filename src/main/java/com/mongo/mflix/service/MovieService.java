@@ -1,5 +1,6 @@
 package com.mongo.mflix.service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,6 +25,25 @@ public class MovieService {
 
 	@Autowired
 	private CommentRepository commentRepository;
+	
+	public Comment addComment(String title, Comment comment)
+	{
+		Optional<Movie> movieOptional = movieRepository.findByTitle(title);
+
+		if (movieOptional.isPresent()) {
+			Movie movie = movieOptional.get();
+			// Find comments by movie ID
+			ObjectId movieId = movie.getId();
+			comment.setMovieId(movieId);
+		}
+		
+		ObjectId commentId = new ObjectId();
+		comment.setId(commentId);
+		comment.setName("Abhishek Chauhan");
+		comment.setEmail("xoxo@gmail.com");
+		comment.setDate(new Date());
+		return commentRepository.save(comment);
+	}
 
 	public List<Comment> getCommentsForMovie(String title) {
 		// Find the movie by title
