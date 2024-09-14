@@ -6,6 +6,7 @@
 - Using this movieId to get all the comments.
 - Revised pagination in MongoDB
 - Revised how to get selected fields from the document !
+- Add the comment to a "comments" collection using the backend.
 
 # Attaching the sampele request here.
 - http://localhost:8080/comments?title=It
@@ -13,5 +14,4 @@
 - http://localhost:8080/movies?page=1&size=1&sortBy=year
 
 # Pending items
-- Add the comment to a collection using the backend.
 - Explore mongoTempalte for Aggregations.
