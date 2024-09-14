@@ -1,4 +1,4 @@
-# mflix
+# mflix - Java Backend project focused on the MongoDB interactions
 - Created the spring boot project with Atlas
 - Playing with 2 collections in the same database, "comments" , "movies"
 - Getting the comments for a perticular movie name
@@ -7,7 +7,11 @@
 - Revised pagination in MongoDB
 - Revised how to get selected fields from the document !
 
-# attaching the sampele request here.
-- http://localhost:8080/comments?title=The Black Pirate
+# Attaching the sampele request here.
+- http://localhost:8080/comments?title=It
 - http://localhost:8080/movies?page=1&size=1
 - http://localhost:8080/movies?page=1&size=1&sortBy=year
+
+# Pending items
+- Add the comment to a collection using the backend.
+- Explore mongoTempalte for Aggregations.
